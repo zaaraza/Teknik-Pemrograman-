@@ -1,0 +1,94 @@
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - === TC-04: shouldRejectLoanWhenCreditScoreLow ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Arrange: borrower dibuat, verified=true, creditScore=450
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Arrange: amount=3000
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Act: memanggil createLoan...
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - verified=true, score=450, amount=3000
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi amount: 3000
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - Loan REJECTED. score=450
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - Status akhir: REJECTED
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-04] Act: loan berhasil dibuat, status=REJECTED
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-04] PASSED ✓
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - === TC-03: shouldApproveLoanWhenCreditScoreHigh ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Arrange: borrower dibuat, verified=true, creditScore=700
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Arrange: amount=5000
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Act: memanggil createLoan...
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - verified=true, score=700, amount=5000
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi amount: 5000
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - Loan APPROVED. score=700
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - Status akhir: APPROVED
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-03] Act: loan berhasil dibuat, status=APPROVED
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-03] PASSED ✓
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - === TC-02: shouldRejectLoanWhenAmountIsZeroOrNegative ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Arrange: borrower dibuat, verified=true, creditScore=700
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Arrange: invalidAmount=0
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Act: memanggil createLoan dengan amount=0...
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - verified=true, score=700, amount=0
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi amount: 0
+2026-04-24 06:56:51 [WARN ] com.p2p.service.LoanService - Amount tidak valid: 0
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-02] PASSED ✓
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - === TC-01: shouldRejectLoanWhenBorrowerNotVerified ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Arrange: borrower dibuat, verified=false, creditScore=700
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Arrange: amount=1000
+2026-04-24 06:56:51 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Act: memanggil createLoan dengan borrower tidak terverifikasi...
+2026-04-24 06:56:51 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - verified=false, score=700, amount=1000
+2026-04-24 06:56:51 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:56:51 [WARN ] com.p2p.service.LoanService - Borrower tidak terverifikasi!
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - [TC-01] PASSED ✓
+2026-04-24 06:56:51 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:57:02 [INFO ] com.p2p.LoanServiceTest - === TC-04: shouldRejectLoanWhenCreditScoreLow ===
+2026-04-24 06:57:02 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Arrange: borrower dibuat, verified=true, creditScore=450
+2026-04-24 06:57:02 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Arrange: amount=3000
+2026-04-24 06:57:02 [DEBUG] com.p2p.LoanServiceTest - [TC-04] Act: memanggil createLoan...
+2026-04-24 06:57:02 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - verified=true, score=450, amount=3000
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi amount: 3000
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - Loan REJECTED. score=450
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - Status akhir: REJECTED
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-04] Act: loan berhasil dibuat, status=REJECTED
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-04] PASSED ✓
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - === TC-03: shouldApproveLoanWhenCreditScoreHigh ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Arrange: borrower dibuat, verified=true, creditScore=700
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Arrange: amount=5000
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-03] Act: memanggil createLoan...
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - verified=true, score=700, amount=5000
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi amount: 5000
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - Loan APPROVED. score=700
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - Status akhir: APPROVED
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-03] Act: loan berhasil dibuat, status=APPROVED
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-03] PASSED ✓
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - === TC-02: shouldRejectLoanWhenAmountIsZeroOrNegative ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Arrange: borrower dibuat, verified=true, creditScore=700
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Arrange: invalidAmount=0
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-02] Act: memanggil createLoan dengan amount=0...
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - verified=true, score=700, amount=0
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi amount: 0
+2026-04-24 06:57:03 [WARN ] com.p2p.service.LoanService - Amount tidak valid: 0
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-02] PASSED ✓
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - ==============================
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - === TC-01: shouldRejectLoanWhenBorrowerNotVerified ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Arrange: borrower dibuat, verified=false, creditScore=700
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Arrange: amount=1000
+2026-04-24 06:57:03 [DEBUG] com.p2p.LoanServiceTest - [TC-01] Act: memanggil createLoan dengan borrower tidak terverifikasi...
+2026-04-24 06:57:03 [INFO ] com.p2p.service.LoanService - === Memulai proses createLoan ===
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - verified=false, score=700, amount=1000
+2026-04-24 06:57:03 [DEBUG] com.p2p.service.LoanService - Validasi KYC borrower...
+2026-04-24 06:57:03 [WARN ] com.p2p.service.LoanService - Borrower tidak terverifikasi!
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - [TC-01] PASSED ✓
+2026-04-24 06:57:03 [INFO ] com.p2p.LoanServiceTest - ==============================
